@@ -14,3 +14,5 @@
 # Database and its Concepts
 
 A computer database is an organized collection of electronic data designed for efficient storage, retrieval, and manipulation by authorized users. Similar in concept to traditional index cards but far more advanced, databases store only necessary, standardized data tailored to the needs of their users. Their size and complexity can range from simple home recipe collections to massive systems managing millions of customer transactions.
+
+A database contains only data relevant to its defined purpose, excluding any unnecessary or unrelated information. During its design, the intended use is clearly specified, ensuring all stored data is logically connected. For example, a library database would include information about loanable items and their details but not unrelated data like weather forecasts. This purposeful organization distinguishes a true database from random, unstructured data collections.
