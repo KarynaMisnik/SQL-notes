@@ -20,3 +20,5 @@ A database contains only data relevant to its defined purpose, excluding any unn
 A database is designed with specific, known users in mind, as its purpose is to serve their needs. Identifying users is essential to determine what data should be stored. For instance, a library database is tailored for visitors and staff, providing information relevant to their requirements, such as item details and availability. This user-focused design distinguishes databases from random data collections.
 
 Every database follows a specific data model that defines how data is stored, presented, and manipulated with precision. The model determines the structure of data units (records), their types, and the relationships between them, shaping how users view and interact with the data. It enables the creation of complex information by connecting simple data records through defined semantic relationships.
+
+### Database Management System
