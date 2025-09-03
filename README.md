@@ -10,6 +10,7 @@
     - [Data models and the relational model](#data-models-and-the-relational-model)
     - [Centralized vs Distributed Databases](#centralized-vs-distributed-databases)
   - [SQL](#SQL)
+  - [NoSQL](#NoSQL)
 - [Database Queries](#database-queries)
 - [Manipulating Data](#manipulating-data)
 - [Designing Database Structure](#designing-database-structure)
@@ -303,3 +304,17 @@ The relational model centers on the concept of <ins>relations</ins>, which repre
 SELECT first_name, last_name
 FROM employees;
 ```
+
+### NoSQL
+
+**NoSQL (Not Only SQL)** databases are designed to handle unstructured, semi-structured, or large-scale distributed data. Unlike relational databases, they don’t require fixed schemas and can store data as key-value pairs, documents, columns, or graphs.
+
+**Key points:**
+
+📍 Flexible schema, suitable for changing data structures.
+
+📍 Scales easily across multiple servers (horizontal scaling).
+
+📍 Types include Document (MongoDB), Key-Value (Redis), Column (Cassandra), Graph (Neo4j).
+
+📍 Commonly used in big data, real-time apps, and web applications.
