@@ -4,8 +4,10 @@
 
 - [Database and its Concepts](#database-and-its-concepts)
   - [Database Management System](#database-management-system)
+  - [Database Architecture](#database-architecture)
   - [Data Models](#data-models)
     - [Data models and the relational model](#data-models-and-the-relational-model)
+    - [Centralized vs Distributed Databases](#centralized-vs-distributed-databases)
   - [SQL](#SQL)
 - [Database Queries](#database-queries)
 - [Manipulating Data](#manipulating-data)
@@ -17,11 +19,45 @@
 
 # Database and its Concepts
 
+**Data** - Raw facts or pieces of information that are stored and managed in a database.
+
+> Note: Data != Information
+
+| Feature        | Data                                            | Information                                                |
+| -------------- | ----------------------------------------------- | ---------------------------------------------------------- |
+| Definition     | Raw facts, figures, or symbols without context. | Processed or organized data that is meaningful and useful. |
+| Nature         | Unprocessed, unorganized.                       | Processed, structured, and organized.                      |
+| Meaning        | No inherent meaning on its own.                 | Has meaning and provides insight.                          |
+| Example        | 25, 30, 45, 60                                  | Average temperature is 40°C.                               |
+| Purpose        | Collected for reference or processing.          | Used for decision-making and understanding.                |
+| Representation | Can be numbers, text, images, or signals.       | Usually a report, summary, or analysis derived from data.  |
+| Value          | Low intrinsic value until processed.            | High value because it supports decisions.                  |
+
+**Data is like raw material; information is the finished product that helps you make decisions.**
+
 A computer database is an organized collection of electronic data designed for efficient storage, retrieval, and manipulation by authorized users. Similar in concept to traditional index cards but far more advanced, databases store only necessary, standardized data tailored to the needs of their users. Their size and complexity can range from simple home recipe collections to massive systems managing millions of customer transactions.
 
 A database contains only data relevant to its defined purpose, excluding any unnecessary or unrelated information. During its design, the intended use is clearly specified, ensuring all stored data is logically connected. For example, a library database would include information about loanable items and their details but not unrelated data like weather forecasts. This purposeful organization distinguishes a true database from random, unstructured data collections.
 
+> Note: Information systems and databases transform raw data into
+> meaningful information and knowledge to support decision-making through
+> context, aggregation, and analysis.
+
 A database is designed with specific, known users in mind, as its purpose is to serve their needs. Identifying users is essential to determine what data should be stored. For instance, a library database is tailored for visitors and staff, providing information relevant to their requirements, such as item details and availability. This user-focused design distinguishes databases from random data collections.
+
+**Real-world Databases Examples:**
+
+1.  Social Media Platforms:
+    • Store user profiles, posts, comments, and likes, ensuring quick retrieval and consistency.
+    • Analyze user interactions and trends for recommendations, ads, and content personalization.
+
+2.  Library Systems:
+    • Track books, borrowers, loans, and reservations with consistent and searchable records.
+    • Analyze borrowing patterns to optimize inventory and suggest popular books.
+
+3.  E-commerce Platforms:
+    • Manage products, orders, customer accounts, and inventory with reliable transactions.
+    • Analyze purchase history and user behavior for personalized recommendations and promotions.
 
 Every database follows a specific data model that defines how data is stored, presented, and manipulated with precision. The model determines the structure of data units (records), their types, and the relationships between them, shaping how users view and interact with the data. It enables the creation of complex information by connecting simple data records through defined semantic relationships.
 
@@ -31,9 +67,35 @@ Every database follows a specific data model that defines how data is stored, pr
 | -----------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------: | ---------------------------------------------------------------: |
 | Data is stored in tables that are connected, keeping it organized and easy to search | Databases can manage more data and users efficiently using methods like splitting and copying data | Databases keep data accurate with rules and protect it with access controls | Committed data stays saved even if the system restarts or crashe |
 
+**Why Use a Database?**
+
+🔄 Data Consistency – Ensures information is accurate and uniform across the database.
+
+🔒 Data Security – Protects data from unauthorized access or breaches.
+
+💾 Data Persistence – Data remains saved even after system restarts or crashes.
+
+✅ Data Integrity – Maintains correctness through rules like constraints and validations.
+
+⚡ Efficient Data Management – Handles large amounts of data and multiple users smoothly.
+
+🔍 Data Accessibility – Allows easy retrieval and querying of data when needed.
+
+📈 Scalability – Can grow with more data, users, or workload without losing performance.
+
+📄 Data Redundancy Reduction – Avoid storing the same data in multiple places, reducing inconsistencies.
+
 ### Database Management System
 
 **A Database Management System (DBMS)** is essential software that enables users to interact with databases, which are typically <ins>too complex</ins> for direct access. Acting as an intermediary between users and the database, the DBMS allows for creating, modifying, and managing databases through standardized communication, such as SQL in relational databases. While it simplifies database operations, effective use often requires knowledge of SQL and the data model, which is why client programs frequently handle this interaction for end-users.
+
+| DBMS Type               | Description                                   | Examples                                                          |
+| ----------------------- | --------------------------------------------- | ----------------------------------------------------------------- |
+| Relational DBMS (RDBMS) | Data stored in tables (rows & columns).       | MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, MariaDB |
+| NoSQL DBMS              | Handles unstructured or semi-structured data. | MongoDB, Cassandra, Redis, CouchDB, Neo4j                         |
+| Object-oriented DBMS    | Stores data as objects (used in programming). | db4o, ObjectDB                                                    |
+| Hierarchical DBMS       | Data organized in a tree-like structure.      | IBM IMS                                                           |
+| Network DBMS            | Data organized as records connected by links. | IDMS                                                              |
 
 **A Database Management System (DBMS)** is essential for handling the inherent complexity of modern, multi-user databases. Commercial database products primarily provide a DBMS, as it enables creating, accessing, and maintaining databases. The DBMS also determines the supported data models, meaning a relational DBMS is required for managing relational databases and performing key administrative tasks.
 
@@ -42,6 +104,82 @@ Every database follows a specific data model that defines how data is stored, pr
 </p>
 
 _Figure 1: SQL sends queries to the DBMS, which interacts with the database._
+
+A Database System has several main components that work together to store, manage, and retrieve data efficiently.
+
+🗄 Hardware – Physical devices like servers, storage, and network equipment where the database runs.
+
+💻 Software – The Database Management System (DBMS) software that controls data storage, queries, and security.
+
+🧑‍💼 Users – People who interact with the database, like administrators, developers, and end-users.
+
+> Note: A Database Administrator (DBA) manages the database, ensuring security, availability, user access, and license management.
+
+> Note: End users are the one who store, retrieve, update and delete
+> data.
+
+📦 Data – The actual information stored in the database (tables, records, etc.).
+
+⚙️ Procedures – Rules, guidelines, and operations for using and managing the database.
+
+🛠 Database Engine – Core part of DBMS that handles data storage, retrieval, and processing.
+
+🔐 Database Schema / Metadata – Structure and organization of the database (tables, columns, relationships).
+
+### Database Architecture
+
+**Database architecture** defines how the database system is structured, how data is stored, managed, and accessed. It determines the interaction between the user, application, and the database.
+
+There are generally three main levels of database architecture:
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Description</th>
+      <th>Example/Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Internal Level (Physical)</td>
+      <td>How data is physically stored on storage devices (disk, SSD, etc.).</td>
+      <td>Storage structures, indexes, file organization.</td>
+    </tr>
+    <tr>
+      <td>Conceptual Level (Logical)</td>
+      <td>Defines the logical structure of the entire database without worrying about physical storage.</td>
+      <td>Tables, relationships, constraints.</td>
+    </tr>
+    <tr>
+      <td>External Level (View)</td>
+      <td>How users see and interact with the data. Multiple user views can exist.</td>
+      <td>Reports, queries, application interfaces.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Types of Database Architecture**
+
+✅ Single-tier Architecture
+
+Database and application reside on the same machine.
+
+Rarely used today.
+
+✅ Two-tier Architecture
+
+Client (user interface) ↔ Database Server.
+
+Example: A desktop app querying a database directly.
+
+✅ Three-tier Architecture
+
+Client ↔ Application Server ↔ Database Server.
+
+Most common in modern web apps.
+
+Pros: Better security, scalability, and maintainability.
 
 ### Data Models
 
@@ -52,6 +190,49 @@ _Figure 1: SQL sends queries to the DBMS, which interacts with the database._
 #### Data models and the relational model
 
 The relational model centers on the concept of <ins>relations</ins>, which represent all data and operations within the system. Its strength lies in providing semantic meaning by defining how data items relate to each other, enabling users to extract meaningful information rather than just isolated data. For example, in a library database, relations can link books to authors, publishers, and borrowing history, creating valuable insights from connected data rather than standalone records.
+
+#### Centralized vs Distributed Databases
+
+**Centralized Database**
+
+A centralized database stores all data in a single location, typically on a single server. All users and applications access this central system.
+
+**Features:**
+
+📍 Data is stored in one location.
+
+📍 Easier to manage, secure, and maintain.
+
+📍 Performance can be affected if too many users access simultaneously.
+
+📍 If the central server fails, the whole system goes down.
+
+<ins>Example:</ins> A university storing all student records in one main server.
+
+**Distributed Database**
+
+A distributed database stores data across multiple locations or servers, which are connected via a network. Users can access data from the nearest or most appropriate server.
+
+**Features:**
+
+📍 Data is distributed across multiple sites.
+
+📍 Faster access for geographically spread users.
+
+📍 System is more fault-tolerant; one server failing doesn’t crash the entire system.
+
+v More complex to manage and maintain consistency.
+
+<ins>Example:</ins> Online shopping platforms storing product data across servers in different countries.
+
+| Feature         | Centralized Database          | Distributed Database                    |
+| --------------- | ----------------------------- | --------------------------------------- |
+| Data Location   | Single central server         | Multiple servers at different locations |
+| Management      | Easier to manage              | More complex to manage                  |
+| Performance     | Can slow down with many users | Faster for local users                  |
+| Fault Tolerance | Single point of failure       | More fault-tolerant                     |
+| Cost            | Lower setup cost              | Higher setup and maintenance cost       |
+| Example         | University main database      | Global e-commerce database              |
 
 ### SQL
 
