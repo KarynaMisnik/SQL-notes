@@ -22,3 +22,9 @@ A database is designed with specific, known users in mind, as its purpose is to 
 Every database follows a specific data model that defines how data is stored, presented, and manipulated with precision. The model determines the structure of data units (records), their types, and the relationships between them, shaping how users view and interact with the data. It enables the creation of complex information by connecting simple data records through defined semantic relationships.
 
 ### Database Management System
+
+**A Database Management System (DBMS)** is essential software that enables users to interact with databases, which are typically <ins>too complex</ins> for direct access. Acting as an intermediary between users and the database, the DBMS allows for creating, modifying, and managing databases through standardized communication, such as SQL in relational databases. While it simplifies database operations, effective use often requires knowledge of SQL and the data model, which is why client programs frequently handle this interaction for end-users.
+
+**A Database Management System (DBMS)** is essential for handling the inherent complexity of modern, multi-user databases. Commercial database products primarily provide a DBMS, as it enables creating, accessing, and maintaining databases. The DBMS also determines the supported data models, meaning a relational DBMS is required for managing relational databases and performing key administrative tasks.
+
+![DBMS - ChatGPT generated ](img/dbms.png)
