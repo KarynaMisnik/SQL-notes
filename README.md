@@ -6,6 +6,7 @@
   - [Database Management System](#database-management-system)
   - [Database Architecture](#database-architecture)
   - [Data Models](#data-models)
+    - [The History of Data Modeling](#the-history-of-data-modeling)
     - [Data models and the relational model](#data-models-and-the-relational-model)
     - [Centralized vs Distributed Databases](#centralized-vs-distributed-databases)
   - [SQL](#SQL)
@@ -167,11 +168,15 @@ Database and application reside on the same machine.
 
 Rarely used today.
 
+<ins>Example:</ins> a desktop or mobile app with its own local database.
+
 ✅ Two-tier Architecture
 
 Client (user interface) ↔ Database Server.
+Clients connect directly to a database server.
 
-Example: A desktop app querying a database directly.
+<ins>Example:</ins> A desktop app querying a database directly, with a central
+database.
 
 ✅ Three-tier Architecture
 
@@ -180,16 +185,6 @@ Client ↔ Application Server ↔ Database Server.
 Most common in modern web apps.
 
 Pros: Better security, scalability, and maintainability.
-
-### Data Models
-
-**A data model** defines the logical structure and rules for how data is presented and manipulated in a database but does not determine its physical storage. The physical structure—how data is written, stored, and retrieved—is handled by the database software and remains hidden from users. Thus, databases using the same data model, such as the relational model, appear similar to users while functioning differently internally.
-
-**The relational model** is a standardized data model used in relational databases, which adhere strictly to its principles. However, some relational DBMSs support extended forms, such as object-relational databases, that integrate object-oriented features. These hybrid models combine aspects of relational and object-oriented approaches but are usually vendor-specific and non-standard.
-
-#### Data models and the relational model
-
-The relational model centers on the concept of <ins>relations</ins>, which represent all data and operations within the system. Its strength lies in providing semantic meaning by defining how data items relate to each other, enabling users to extract meaningful information rather than just isolated data. For example, in a library database, relations can link books to authors, publishers, and borrowing history, creating valuable insights from connected data rather than standalone records.
 
 #### Centralized vs Distributed Databases
 
@@ -233,6 +228,72 @@ v More complex to manage and maintain consistency.
 | Fault Tolerance | Single point of failure       | More fault-tolerant                     |
 | Cost            | Lower setup cost              | Higher setup and maintenance cost       |
 | Example         | University main database      | Global e-commerce database              |
+
+### Data Models
+
+**A data model** defines the logical structure and rules for how data is presented and manipulated in a database but does not determine its physical storage. The physical structure—how data is written, stored, and retrieved—is handled by the database software and remains hidden from users. Thus, databases using the same data model, such as the relational model, appear similar to users while functioning differently internally.
+
+**Database modeling** is designing how data is organized, stored, and accessed to ensure consistency, efficiency, and scalability for applications.
+
+#### The History of Data Modeling
+
+**1960s – 1970s:** Early databases were hierarchical (IBM IMS) and network (CODASYL); data models were rigid.
+
+**1970s:** Relational model introduced by E.F. Codd, organizing data in tables with SQL for queries.
+
+**1980s:** Entity-Relationship (ER) modeling developed by Peter Chen to visually represent data and relationships.
+
+**1990s – 2000s:** Object-oriented and object-relational databases emerged to handle complex data types.
+
+**2000s** – Present: NoSQL and Big Data models became popular for unstructured and distributed data.
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Model</th>
+      <th>Main Principle</th>
+      <th>Key Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hierarchical</td>
+      <td>Data organized in a tree-like structure</td>
+      <td>Parent-child relationships; rigid and hard to modify</td>
+    </tr>
+    <tr>
+      <td>Network</td>
+      <td>Data represented as records connected by links</td>
+      <td>Flexible many-to-many relationships; used in CODASYL DBs</td>
+    </tr>
+    <tr>
+      <td>Relational</td>
+      <td>Data stored in tables with rows and columns</td>
+      <td>Introduced by E.F. Codd; supports SQL queries</td>
+    </tr>
+    <tr>
+      <td>Entity-Relationship (ER)</td>
+      <td>Data and relationships modeled visually as entities and links</td>
+      <td>Developed by Peter Chen; used for database design</td>
+    </tr>
+    <tr>
+      <td>Object-Oriented</td>
+      <td>Data stored as objects like in programming languages</td>
+      <td>Supports complex data types and inheritance</td>
+    </tr>
+    <tr>
+      <td>NoSQL / Big Data</td>
+      <td>Handles unstructured and distributed data</td>
+      <td>Includes document, key-value, column, and graph databases</td>
+    </tr>
+  </tbody>
+</table>
+
+**The relational model** is a standardized data model used in relational databases, which adhere strictly to its principles. However, some relational DBMSs support extended forms, such as object-relational databases, that integrate object-oriented features. These hybrid models combine aspects of relational and object-oriented approaches but are usually vendor-specific and non-standard.
+
+#### Data models and the relational model
+
+The relational model centers on the concept of <ins>relations</ins>, which represent all data and operations within the system. Its strength lies in providing semantic meaning by defining how data items relate to each other, enabling users to extract meaningful information rather than just isolated data. For example, in a library database, relations can link books to authors, publishers, and borrowing history, creating valuable insights from connected data rather than standalone records.
 
 ### SQL
 
