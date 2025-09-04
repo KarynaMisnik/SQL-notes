@@ -117,8 +117,7 @@ A Database System has several main components that work together to store, manag
 
 > Note: A Database Administrator (DBA) manages the database, ensuring security, availability, user access, and license management.
 
-> Note: End users are the one who store, retrieve, update and delete
-> data.
+> Note: End users are the one who store, retrieve, update and delete data.
 
 📦 Data – The actual information stored in the database (tables, records, etc.).
 
@@ -167,7 +166,7 @@ There are generally three main levels of database architecture:
 
 Database and application reside on the same machine.
 
-Rarely used today.
+<ins>Rarely</ins> used today.
 
 <ins>Example:</ins> a desktop or mobile app with its own local database.
 
