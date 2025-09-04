@@ -217,7 +217,7 @@ A distributed database stores data across multiple locations or servers, which a
 
 📍 System is more fault-tolerant; one server failing doesn’t crash the entire system.
 
-v More complex to manage and maintain consistency.
+📍 More complex to manage and maintain consistency.
 
 <ins>Example:</ins> Online shopping platforms storing product data across servers in different countries.
 
