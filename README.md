@@ -294,7 +294,9 @@ v More complex to manage and maintain consistency.
 
 #### Data models and the relational model
 
-The relational model centers on the concept of <ins>relations</ins>, which represent all data and operations within the system. Its strength lies in providing semantic meaning by defining how data items relate to each other, enabling users to extract meaningful information rather than just isolated data. For example, in a library database, relations can link books to authors, publishers, and borrowing history, creating valuable insights from connected data rather than standalone records.
+The relational model centers on the concept of <ins>relations</ins>, which represent all data and operations within the system. Its strength lies in providing semantic meaning by defining how data items relate to each other, enabling users to extract meaningful information rather than just isolated data.
+
+For example, in a library database, relations can link books to authors, publishers, and borrowing history, creating valuable insights from connected data rather than standalone records.
 
 ### SQL
 
