@@ -11,6 +11,7 @@
     - [Centralized vs Distributed Databases](#centralized-vs-distributed-databases)
   - [SQL](#SQL)
   - [NoSQL](#NoSQL)
+- [Relational Model](#relational-model)
 - [Database Queries](#database-queries)
 - [Manipulating Data](#manipulating-data)
 - [Designing Database Structure](#designing-database-structure)
@@ -321,3 +322,8 @@ FROM employees;
 📍 Types include Document (MongoDB), Key-Value (Redis), Column (Cassandra), Graph (Neo4j).
 
 📍 Commonly used in big data, real-time apps, and web applications.
+
+# Relational Model
+
+The relational model is built around the concept of a **relation (table)**, which sets it apart from earlier record-based models.
+**Records (rows)** exist only within relations, and all data in the model is stored or represented as part of a relation.
