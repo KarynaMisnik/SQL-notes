@@ -12,6 +12,7 @@
   - [SQL](#SQL)
   - [NoSQL](#NoSQL)
 - [Relational Model](#relational-model)
+  - [Key-attributes](#key-attributes)
 - [Database Queries](#database-queries)
 - [Manipulating Data](#manipulating-data)
 - [Designing Database Structure](#designing-database-structure)
@@ -336,3 +337,5 @@ Each **row** in a table represents a **record** (or **tuple**).
 Rows contain **cells**, and each cell holds <ins>one single value</ins> — never more.
 The value can be a number, text, date, or time, depending on the column’s attribute.
 Some cells may be empty, but even then, they hold a special value called **NULL**.
+
+### Key-attributes
