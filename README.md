@@ -331,3 +331,8 @@ The relational model is built around the concept of a **relation (table)**, whic
 The top row of a table is highlighted to show the **attributes** — the properties that define what kind of data each column can store.
 Each column has an attribute specifying its **data type** (e.g., text, number, date) and **domain** (the allowed range of values).
 For example, the column <ins>Price</ins> might have a data type of <ins>decimal</ins> and a <ins>domain</ins> of 0.00–1000.00.
+
+Each **row** in a table represents a **record** (or **tuple**).
+Rows contain **cells**, and each cell holds <ins>one single value</ins> — never more.
+The value can be a number, text, date, or time, depending on the column’s attribute.
+Some cells may be empty, but even then, they hold a special value called **NULL**.
