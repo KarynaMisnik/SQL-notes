@@ -327,3 +327,7 @@ FROM employees;
 
 The relational model is built around the concept of a **relation (table)**, which sets it apart from earlier record-based models.
 **Records (rows)** exist only within relations, and all data in the model is stored or represented as part of a relation.
+
+The top row of a table is highlighted to show the **attributes** — the properties that define what kind of data each column can store.
+Each column has an attribute specifying its **data type** (e.g., text, number, date) and **domain** (the allowed range of values).
+For example, the column <ins>Price</ins> might have a data type of <ins>decimal</ins> and a <ins>domain</ins> of 0.00–1000.00.
