@@ -20,6 +20,7 @@
 - [Database Performance](#database-performance)
 - [Database Security](#database-security)
 - [Open Interfaces and NoSQL](#open-interfaces-and-nosql)
+- [SQL command types](#sql-command-types)
 
 # Database and its Concepts
 
@@ -339,3 +340,13 @@ The value can be a number, text, date, or time, depending on the column’s attr
 Some cells may be empty, but even then, they hold a special value called **NULL**.
 
 ### Key-attributes
+
+# SQL command types
+
+| **Category** | **Full Form**                | **Purpose**                             | **Examples**                                         |
+| ------------ | ---------------------------- | --------------------------------------- | ---------------------------------------------------- |
+| **DDL**      | Data Definition Language     | Defines and modifies database structure | `CREATE`, `ALTER`, `DROP`, `TRUNCATE`                |
+| **DML**      | Data Manipulation Language   | Manages data within tables              | `SELECT`, `INSERT`, `UPDATE`, `DELETE`               |
+| **DCL**      | Data Control Language        | Controls access and permissions         | `GRANT`, `REVOKE`                                    |
+| **TCL**      | Transaction Control Language | Manages transactions in a database      | `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION` |
+| **DQL**      | Data Query Language          | Retrieves data from the database        | `SELECT`                                             |
